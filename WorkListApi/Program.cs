@@ -1,3 +1,6 @@
+
+
+using Microsoft.EntityFrameworkCore;
 using NewWorkPlaceInfrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,8 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 
+var connectionString = "Server=DESKTOP-JD2U15O\\MSSQL1;Database=NewWorkList;Integrated Security=True;TrustServerCertificate=true;";
 
-
+builder.Services.AddDbContext<NewWorkPlaceDbContext>(options =>
+    options.UseSqlServer(connectionString));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
