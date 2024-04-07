@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewWorkPlaceDomain.Roles
+namespace NewWorkPlaceDomain.Entities.ToFindJob.Users
 {
-    public class Role
+    public class UsersToFindJob
     {
         [Key]
         public Guid Id { get; set; }
-        public string Name { get; set; }
+        public string EmailUserToFindJob { get; set; } = null!;
 
     }
 }

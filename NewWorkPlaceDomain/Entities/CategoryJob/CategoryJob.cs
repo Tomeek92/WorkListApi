@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewWorkPlaceDomain.ToTakeJob.Users
+namespace NewWorkPlaceDomain.Entities.CategoryJob
 {
-    public class UsersToTakeJob
+    public class CategoryJob
     {
         [Key]
         public Guid Id { get; set; }
-        public string EmailUsersToTakeJob { get; set; } = null!;
+        public string Name { get; set; }
     }
 }

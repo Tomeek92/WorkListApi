@@ -1,6 +1,8 @@
 ﻿@{
-    Layout = null!;
+    Layout = null;
 }
+
+@model NewWorkPlaceDomain.Entities.ToFindJob.Register.RegisterToFindJob;
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="~/css/Home.css" rel="stylesheet">
+    <link href="~/css/AddAcount.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -26,34 +28,23 @@
             </ul>
         </nav>
     </header>
-    <section id="filters">
-        <h2>Filtry</h2>
-        <label for="filterType">Typ oferty:</label>
-        <select id="filterType">
-            <option value="">Wszystkie</option>
-            <option value="frontend">Frontend Developer</option>
-            <option value="marketing">Marketing Intern</option>
-            </select>
-    </section>
-    <section id="oferty">
-        <h2>Nasze Oferty Pracy</h2>
-        <div class="offer">
-            <h3>Frontend Developer</h3>
-            <p>Zdobądź doświadczenie w tworzeniu interfejsów użytkownika!</p>
-        </div>
-        <div class="offer">
-            <h3>Marketing Intern</h3>
-            <p>Pomóż nam promować nasze produkty!</p>
-        </div>
-    </section>
+    <div class="flex-container">
+    <div class="log">
+    <img src="https://i.ibb.co/PzpRZbf/81f81336-3ed2-4adb-a5eb-a650f8057b51.jpg" alt="photo to search" class="logo-search" />
+    </div>
+    <div class="register">
+            <form action="AddAcount" method="post">
+                <h1 class="register-head">Rejestracja</h1>
+                <input type="email" name="RegisterEmailToFindJob" id="RegisterEmailToFindJob" placeholder="E-mail" required>
+                <input type="password" name="RegisterPasswordToFindJob" id="RegisterPasswordToFindJob" placeholder="Hasło" required>
+                <input type="submit" value="Zarejestruj się">
+            </form>
+    </div>
 
+    </div>
    
 
-    <footer>
-        <p>&copy; 2024 Praca dla Studentów</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-   
+
+

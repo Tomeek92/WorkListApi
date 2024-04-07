@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewWorkPlaceDomain.ToFindJob.Register
+namespace NewWorkPlaceDomain.Entities.ToFindJob.Register
 {
     public class RegisterToFindJob
     {

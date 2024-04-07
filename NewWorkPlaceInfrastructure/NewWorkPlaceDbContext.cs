@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NewWorkPlaceDomain.CategoryJob;
-using NewWorkPlaceDomain.Roles;
-
+using NewWorkPlaceDomain.Entities.CategoryJob;
+using NewWorkPlaceDomain.Entities.Roles;
+using NewWorkPlaceDomain.Entities.ToFindJob.Register;
+using NewWorkPlaceDomain.Entities.ToTakeJob.Register;
 
 namespace NewWorkPlaceInfrastructure
 {
@@ -11,6 +12,9 @@ namespace NewWorkPlaceInfrastructure
         
         public DbSet<CategoryJob> Categories { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<RegisterToFindJob> RegisterToFindJobs { get; set;} 
+        public DbSet<RegisterToTakeJob> RegisterToTakeJobs { get; set;} 
+
       
 
     }

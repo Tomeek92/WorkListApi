@@ -1,0 +1,102 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #1B283B;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-header {
+    width: 200px;
+}
+
+.logo-search {
+    width: 600px;
+    border-radius: 25px; 
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff; 
+}
+
+.nav {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+    nav ul li a {
+        text-decoration: none;
+        color: #fff; 
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 25px; 
+        transition: background-color 0.5s ease;
+    }
+
+        nav ul li a:hover {
+            background-color: #2D3E50; 
+        }
+ .flex-container{
+     display:flex;
+ }
+.register {
+    margin-top: 3%; /* Odstęp od nagłówka */
+    margin-bottom: 3%; /* Odstęp od dolu */
+    max-width: 400px;
+    margin-left: auto; /* Automatyczne wycentrowanie formularza na ekranie */
+    margin-right: auto; /* Automatyczne wycentrowanie formularza na ekranie */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", sans-serif;
+}
+
+.register-head {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1B283B;
+}
+
+.register input[type="text"],
+.register input[type="email"],
+.register input[type="password"],
+.register input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #1B283B;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.register input[type="submit"] {
+    background-color: #1B283B;
+    color: #fff;
+    cursor: pointer;
+}
+
+    .register input[type="submit"]:hover {
+        background-color: #2D3E50;
+    }

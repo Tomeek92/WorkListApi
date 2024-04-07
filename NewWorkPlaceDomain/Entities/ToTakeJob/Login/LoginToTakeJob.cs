@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewWorkPlaceDomain.ToTakeJob.Login
+namespace NewWorkPlaceDomain.Entities.ToTakeJob.Login
 {
     public class LoginToTakeJob
     {

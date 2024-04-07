@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewWorkPlaceDomain.CategoryJob
+namespace NewWorkPlaceDomain.Entities.Roles
 {
-   public class CategoryJob
+    public class Role
     {
         [Key]
-        public Guid Id { get; set; }   
-        public string Name { get; set; }  
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+
     }
 }

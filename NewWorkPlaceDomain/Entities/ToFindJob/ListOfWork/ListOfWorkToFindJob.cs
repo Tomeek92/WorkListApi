@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewWorkPlaceDomain.ToFindJob.ListOfWork
+namespace NewWorkPlaceDomain.Entities.ToFindJob.ListOfWork
 {
     public class ListOfWorkToFindJob
     {
