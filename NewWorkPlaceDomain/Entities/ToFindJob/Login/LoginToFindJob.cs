@@ -10,5 +10,6 @@ namespace NewWorkPlaceDomain.Entities.ToFindJob.Login
     {
         public string LoginEmailToFindJob { get; set; } = null!;
         public string LoginPasswordToFindJob { get; set; } = null!;
+        public DateTime LoginAt { get; set; } = DateTime.UtcNow;
     }
 }

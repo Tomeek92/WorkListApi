@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using NewWorkPlaceDomain.Interface;
 using NewWorkPlaceInfrastructure;
 using NewWorkPlaceInfrastructure.Repository;
+using NewWorkPlaceInfrastructure.Seeders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IRegisterToFindJob, RegisterToFindJobRepository>();
 builder.Services.AddScoped<IRegisterToTakeJob, RegisterToTakeJobRepository>();
+builder.Services.AddScoped<SeederRoles>();
 
 var connectionString = "Server=DESKTOP-JD2U15O\\MSSQL1;Database=NewWorkList;Integrated Security=True;TrustServerCertificate=true;";
 
@@ -18,6 +20,10 @@ builder.Services.AddDbContext<NewWorkPlaceDbContext>(options =>
     options.UseSqlServer(connectionString));
 var app = builder.Build();
 
+var scope = app.Services.CreateScope();
+
+var seeder = scope.ServiceProvider.GetRequiredService<SeederRoles>();
+await seeder.Seed();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

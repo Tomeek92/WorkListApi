@@ -10,5 +10,6 @@ namespace NewWorkPlaceDomain.Entities.ToTakeJob.Login
     {
         public string LoginEmailToTakeJob { get; set; } = null!;
         public string LoginPasswordToTakeJob { get; set; } = null!;
+        public DateTime LoginAt { get; set; } = DateTime.UtcNow;
     }
 }
