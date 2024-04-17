@@ -6,13 +6,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="~/css/Home.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Header z efektem pisania na klawiaturze</title>
+    <link rel="stylesheet" href="~/css/Home.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>TalentStudent</title>
 </head>
 <body>
     <header>
@@ -26,34 +23,34 @@
             </ul>
         </nav>
     </header>
-    <section id="filters">
-        <h2>Filtry</h2>
-        <label for="filterType">Typ oferty:</label>
-        <select id="filterType">
-            <option value="">Wszystkie</option>
-            <option value="frontend">Frontend Developer</option>
-            <option value="marketing">Marketing Intern</option>
-            </select>
-    </section>
-    <section id="oferty">
-        <h2>Nasze Oferty Pracy</h2>
-        <div class="offer">
-            <h3>Frontend Developer</h3>
-            <p>Zdobądź doświadczenie w tworzeniu interfejsów użytkownika!</p>
-        </div>
-        <div class="offer">
-            <h3>Marketing Intern</h3>
-            <p>Pomóż nam promować nasze produkty!</p>
-        </div>
-    </section>
+    <h1 id="typing-header" class="typing-header"> </h1>
+    <script>
+        
+        // Tekst do wyświetlenia w nagłówku
+        const textToType = "Poznaj najnowsze oferty pracy";
 
-   
+        const headerElement = document.getElementById('typing-header');
 
-    <footer>
-        <p>&copy; 2024 Praca dla Studentów</p>
-    </footer>
+        function typeWriter(text, i) {
+            if (i < text.length) {
+                // Dodaj pojedynczy znak do nagłówka
+                headerElement.innerHTML += text.charAt(i);
 
-    <script src="script.js"></script>
+                setTimeout(function () {
+                    typeWriter(text, i + 1)
+                }, 50);
+            } else {
+                // Po zakończeniu pisania, czekaj chwilę, a następnie wyczyść nagłówek i rozpocznij pisanie od początku
+                setTimeout(function () {
+                    headerElement.innerHTML = '';
+                    typeWriter(text, 0);
+                }, 2000);
+            }
+        }
+
+        // Uruchomienie funkcji symulującej pisanie na ekranie
+        typeWriter(textToType, 0);
+    </script>
 </body>
 </html>
    

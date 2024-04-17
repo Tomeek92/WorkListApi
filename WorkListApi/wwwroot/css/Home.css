@@ -1,9 +1,7 @@
-﻿
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+﻿body {
+    font-family: Arial, sans-serif;
 }
+
 header {
     background-color: #1B283B;
     color: white;
@@ -21,7 +19,6 @@ header {
     font-style: normal;
     font-size: 20px;
 }
-
 nav ul li {
     margin-right: 20px;
 }
@@ -46,134 +43,30 @@ nav ul {
             background-color: #2D3E50;
         }
 
-h1 {
-    font-size: 2rem;
+#typing-header {
+    display: inline-block;
+    border-right: 2px solid #000;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1s steps(40, end), blink-caret 2s step-end infinite;
 }
 
-section {
-    padding: 50px;
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.offer {
-    background-color: #E8E8E8;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-    .offer:hover {
-        transform: translateY(-5px);
+@keyframes typing {
+    from {
+        width: 0;
     }
 
-    .offer h3 {
-        color: #1B283B;
+    to {
+        width: 100%;
     }
-
-form label {
-    display: block;
-    margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="file"],
-button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #1B283B;
-    border-radius: 5px;
-    transition: box-shadow 0.3s ease;
-}
-
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    input[type="file"]:focus {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
     }
 
-button[type="submit"] {
-    background-color: #1B283B;
-    color: #FFFFFF;
-    border: none;
-    cursor: pointer;
-}
-
-    button[type="submit"]:hover {
-        background-color: #0F1923;
+    80% {
+        border-color: #000;
     }
-
-#searchInput {
-    width: 300px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #1B283B;
-    border-radius: 5px;
-}
-
-#filters {
-    padding: 20px;
-    background-color: #f8f9fa; 
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    margin-bottom: 20px; 
-}
-
-    #filters h2 {
-        margin-bottom: 20px; 
-        color: #333; 
-        font-size: 24px; 
-    }
-
-    #filters label {
-        display: block;
-        margin-bottom: 10px; 
-        font-size: 16px; 
-        color: #666; 
-    }
-
-#filterType {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px; 
-    border: 1px solid #ced4da; 
-    border-radius: 8px; 
-    font-size: 16px;
-}
-
-
-.offer {
-    background-color: #ffffff; 
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease;
-}
-
-    .offer h3 {
-        color: #1B283B;
-        font-size: 20px; 
-        margin-bottom: 10px; 
-    }
-
-    .offer p {
-        color: #555;
-        font-size: 16px; 
-    }
-
-    .offer:hover {
-        transform: translateY(-5px); 
-    }
-footer {
-    background-color: #1B283B;
-    color: #FFFFFF;
-    padding: 20px;
-    text-align: center;
 }
