@@ -14,7 +14,7 @@ builder.Services.AddScoped<IRegisterToFindJob, RegisterToFindJobRepository>();
 builder.Services.AddScoped<IRegisterToTakeJob, RegisterToTakeJobRepository>();
 builder.Services.AddScoped<SeederRoles>();
 
-var connectionString = "Server=DESKTOP-JD2U15O\\MSSQL1;Database=NewWorkList;Integrated Security=True;TrustServerCertificate=true;";
+var connectionString = 
 
 builder.Services.AddDbContext<NewWorkPlaceDbContext>(options =>
     options.UseSqlServer(connectionString));
